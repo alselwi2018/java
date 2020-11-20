@@ -9,9 +9,18 @@ public class Exercise001 {
     // More examples in exercise001 test cases.
 
     // Good luck!
+    public static void main(String[] args){
+        int[] a = {2,3,4,3,5,2,7};
+        int x = a.length;
+        System.out.println(singles(a,x));
+    }
 
-    public int singles(int [] arr){
-        // Add your code here!
-        return 0;
+    public static int singles(int [] arr,int val){
+        int x = arr[0];
+        
+        for(int i=0; i <val; i++){
+            x = x ^ arr[i]; 
+        }
+        return x;
     }
 }
