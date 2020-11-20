@@ -1,5 +1,7 @@
 package com.techreturners.exercise003;
 
+import java.util.List;
+
 public class Exercise003 {
 
     // Scenario
@@ -28,7 +30,27 @@ public class Exercise003 {
 
     public static int[] rowWeights(final int[] weights) {
         // Your code here!
-        return new int[]{0, 0};
+        List<Integer> team1 = new ArrayList<>();
+        List<Integer> team2 = new ArrayList<>();
+        int group1 = 0;
+        int group2 = 0;
+        for(int i = 0; i < weights.length; i++){
+            if(i % 2 == 0){
+                team1.add(weights[i]);
+            }else{
+                team2.add(weights[i]);
+            }
+        }
+        for(int x = 0; x < team1.size();x++){
+            group1 += team1.get(x);
+        }
+        for(int y = 0; y < team2.size(); y++){
+            group2 +=team2.get(y);
+        }
+        int[] res = {group1, group2};
+
+        //return new int[]{0, 0};
+        return res;
     }
 
 }

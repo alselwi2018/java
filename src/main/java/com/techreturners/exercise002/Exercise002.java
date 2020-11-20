@@ -1,4 +1,5 @@
 package com.techreturners.exercise002;
+import java.util.concurrent.TimeUnit;
 
 public class Exercise002 {
 
@@ -7,6 +8,10 @@ public class Exercise002 {
 
     public int past(int h, int m, int s) {
         // Your code here!
-        return 0;
+
+        int hh =(int)TimeUnit.HOURS.toMillis(h);
+        int mm = (int)TimeUnit.MINUTES.toMillis(m);
+        int ss = (int)TimeUnit.SECONDS.toMillis(s);
+        return hh + mm + ss;
     }
 }
