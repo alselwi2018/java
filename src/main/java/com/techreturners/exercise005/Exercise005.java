@@ -25,6 +25,7 @@ public class Exercise005 {
     // wave("hello") => ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
 
     // Good luck and enjoy!
+    
 
     public String[] mexicanWave(String str) {
         // Your code here!
