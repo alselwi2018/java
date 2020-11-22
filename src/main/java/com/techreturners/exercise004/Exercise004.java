@@ -10,7 +10,7 @@ public class Exercise004 {
 
     public String pigLatin(String str) {
         // Add your code here
-        return Pattern.compile(" +").splitAsStream(str).map(s->s.matches("[a-zA-Z]+") ? s.substring(1)+ s.charAt(0) + "ay": s)
+        return Pattern.compile(" +").splitAsStream(str).map(s->s.matches("[a-zA-Z!]+") ? s.substring(1)+ s.charAt(0) + "ay": s)
         .collect(Collectors.joining(" "));
        
     }
